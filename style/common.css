@@ -1,0 +1,154 @@
+/* ------------------- 
+   0. Layout Reset & Global Styles
+   ------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 전체 페이지 스크롤 방지 */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ------------------- 
+   1. Slide Container & Item Styles 
+   ------------------- */
+
+/* 슬라이드를 가로로 배열하는 컨테이너 */
+.slider-container {
+    display: flex;
+    width: 600vw; /* 6개의 슬라이드 * 100vw */
+    height: 100%;
+    /* 부드러운 이동 효과 */
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+/* 개별 슬라이드: 뷰포트 전체 크기 */
+.slide {
+    flex: 0 0 16.6666%; /* 1/6 너비 */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* ------------------- 
+   2. Navigation Menu Styles 
+   ------------------- */
+.main-nav {
+    position: fixed;
+    bottom:40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200; 
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav ul {
+    display: flex;
+    gap:10px;
+}
+
+.main-nav li a {
+    color: #7d7d7d;
+    transition: color 0.3s;
+    position: relative;
+    text-transform: uppercase;
+    font-size:14px;
+}
+
+.main-nav li:nth-child(2) a {
+    padding:0 10px;
+    border-left: 1px solid #7d7d7d;
+    border-right: 1px solid #7d7d7d;
+}
+
+/* 활성 메뉴 아이템 스타일 */
+.main-nav li a.active {
+    color: #000; /* 강조 색상 */
+}
+
+
+/* ------------------- 
+   3. Arrow Control Styles 
+   ------------------- */
+.next-control {
+    position: fixed; 
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    z-index: 150;
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    transition: opacity 0.3s;
+    animation: bounce-y 1.3s ease-in-out infinite;
+}
+
+/* PROJECT 텍스트 스타일 */
+.project-text {
+    /* 요청 스타일: 20px semibold 120% -2% #FFF */
+    font-size: 20px;
+    font-weight: 600; 
+    line-height: 1.2em; 
+    letter-spacing: -0.02em; 
+    color: #FFF; 
+    opacity: 0; /* JS로 제어, 기본 숨김 */
+    transition: opacity 0.3s;
+}
+
+/* 화살표 버튼 기본 설정 */
+.arrow-btn.next-btn {
+    width: 50px; /* 요청 크기 */
+    height: 50px; /* 요청 크기 */
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0; /* 기본 텍스트 숨김 */
+    outline: none;
+}
+
+/* 슬라이드 0 (HOME): 검은색 화살표 */
+.arrow-black {
+    /* [Right arrow.png] 링크로 변경하세요 */
+    background-image: url('../images/black-arrow.png'); 
+}
+
+/* 슬라이드 1~4: 흰색 화살표 */
+.arrow-white {
+    /* [Right arrow (1).png] 링크로 변경하세요 */
+    background-image: url('../images/white-arrow.png'); 
+}
+
+/* 마지막 슬라이드에서 컨트롤 숨김 */
+.next-control.hidden {
+    opacity: 0;
+    pointer-events: none; /* 클릭 이벤트 방지 */
+}
+
+/* 화살표 애니메이션 */
+@keyframes bounce-y {
+    0%, 100% {
+        /* 시작과 끝(0%와 100% 시점)에서는 원래 위치(Y축 0px) */
+        transform: translateY(0);
+    }
+    50% {
+        /* 중간(50% 시점)에서는 위로 5px 이동 */
+        transform: translateY(-5px);
+    }
+}

@@ -1,0 +1,91 @@
+/* ===================== 1. home ================= */
+.home-section { justify-content: center; align-items: center;}
+.home-section .text-box {
+    display:flex; flex-flow: column;
+    gap:40px;
+}
+.home-section p {
+    font-size: 20px; font-weight: 500;
+    letter-spacing: -2%;
+    padding:5px 10px;
+    border:1px solid #000;
+    width:max-content;
+}
+.home-section h1 {
+    font-size:48px; font-weight:300;
+    letter-spacing: -2%; line-height: 130%;
+}
+.home-section h1 span {
+    display:inline-block;
+    font-size:48px; font-weight:500;
+    letter-spacing: -2%; line-height: 130%;
+}
+/* ===================== 2. about me ================= */
+.about-section {flex-flow: row nowrap;}
+.about-section .about {
+    width:50%; display:flex; flex-flow: column;
+    gap:120px;
+}
+.about-section .about .index {font-size:24px; line-height: 120%;}
+/* ================================================== */
+.about-section .about .introduce {}
+.about-section .about .introduce h2 {
+    font-size:32px; font-weight: 500; line-height: 140%;
+}
+.about-section .about .introduce p {
+    line-height: 150%; margin-top:20px;
+}
+/* ================================================== */
+.about-section .about .overview {
+    display:grid;
+    grid-template-columns:300px 1fr;
+    row-gap: 60px;
+}
+.about-section .about .overview .profile {}
+.about-section .about .overview ul li.title {font-weight:600; margin-bottom:20px;}
+.about-section .about .overview ul li {line-height: 180%;}
+.about-section .about .overview .education .edu-box {display:flex; gap:20px;}
+.about-section .about .overview .education .edu-box .date li {font-size:14px; line-height:200%; white-space: nowrap;}
+.about-section .about .overview .education .edu-box .info li {white-space: nowrap;}
+/* ================================================== */
+.about-section .about .overview .skill .skill-box {display:flex;}
+.about-section .about .overview .skill .skill-box ul {display:flex; gap:10px; }
+.about-section .about .overview .skill .skill-box ul li {
+    display:flex; justify-content: center; align-items: center; padding:10px;
+    border:3px solid #000; width:60px; height:60px; border-radius: 10px;
+}
+.about-section .about .overview .skill .skill-box ul li:nth-child(1),
+.about-section .about .overview .skill .skill-box ul li:nth-child(2) {font-size:20px; font-weight: 500;}
+.about-section .about .overview .skill .skill-box ul li:nth-child(3),
+.about-section .about .overview .skill .skill-box ul li:nth-child(4),
+.about-section .about .overview .skill .skill-box ul li:nth-child(5),
+.about-section .about .overview .skill .skill-box ul li:nth-child(6) {font-size:14px; font-weight: 700;}
+.about-section .about .overview .skill .skill-box ul li:nth-child(6) {line-height:120%;}
+.about-section .about .overview .skill .skill-box ul li:nth-child(7) {font-size:12px; font-weight: 800; white-space: nowrap;}
+/* ================================================== */
+.about-section .next-project {
+    width:50%; height:100vh;
+    position: relative; 
+    transform: translateY(-40px) translateX(40px);
+    background:url(../images/about_project.png);
+    background-size: cover;
+}
+/* ===================== 3. project ================= */
+.project {flex-flow:row; align-items:flex-end; justify-content:space-between; padding:120px 80px; background:gray;}
+.project .info {width:50%; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);}
+.project .info .title h2 {font-size:32px; font-weight: 500; line-height: 140%; letter-spacing:-2%; color:#fff; margin-bottom:5px;}
+.project .info .title h3 {font-weight: 500; line-height: 140%; letter-spacing: -2%; color:#fff; margin-bottom: 20px;}
+.project .info .contents {padding-top:20px; border-top:1px solid #fff;}
+.project .info .contents p {font-weight:600; line-height: 140%; letter-spacing: -2%; color:#fff;}
+
+.project .link {width:50%; display:flex; justify-content: flex-end; gap:40px;} 
+.project .link a {display:flex; align-items: center; gap:10px; border:3px solid #aaa; border-radius:10px; padding:10px 20px;}
+.project .link a span {color:#aaa; font-weight: 700;}
+/* ===================project1 ================= */
+.project-section-1 {background:url(../images/project1.png); background-size:cover;} 
+/* ===================project2 ================= */
+.project-section-2 {background:url(../images/project2.png); background-size:cover;} 
+/* ===================project3 ================= */
+.project-section-3 {background:url(../images/project3.png); background-size:cover;} 
+    
+/* ===================== 4. graphic-section ================= */
