@@ -89,7 +89,7 @@
 .project-section-3 {background:url(../images/project3.png); background-size:cover;} 
     
 /* ===================== 4. graphic-section ================= */
-.graphic-section {justify-content: center; align-items: center;}
+.graphic-section {justify-content: center; align-items: center; overflow:hidden;}
 .gallerySwiper {
     width: 100vw;
     height: 380px;
@@ -116,4 +116,3 @@
     display:flex; justify-content: flex-start; align-items: center; gap:5px;
     margin-bottom: 10px; line-height:180%; letter-spacing: -2%;
 }
-
