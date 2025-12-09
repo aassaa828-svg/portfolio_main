@@ -82,12 +82,14 @@
 .project .link a {display:flex; align-items: center; gap:10px; border:3px solid #aaa; border-radius:10px; padding:10px 20px;}
 .project .link a span {color:#aaa; font-weight: 700;}
 /* ===================project1 ================= */
-.project-section-1 {background:url(../images/project1.png); background-size:cover;} 
+.project-section-1 {background:url(../images/project3.png); background-size:cover;} 
+
 /* ===================project2 ================= */
-.project-section-2 {background:url(../images/project2.png); background-size:cover;} 
+.project-section-2 {background:url(../images/project1.png); background-size:cover;} 
+
 /* ===================project3 ================= */
-.project-section-3 {background:url(../images/project3.png); background-size:cover;} 
-    
+.project-section-3 {background:url(../images/project2.png); background-size:cover;} 
+
 /* ===================== 4. graphic-section ================= */
 .graphic-section {justify-content: center; align-items: center; overflow:hidden;}
 .gallerySwiper {

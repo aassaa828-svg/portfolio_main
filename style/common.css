@@ -97,15 +97,35 @@ html, body {
     animation: bounce-y 1.3s ease-in-out infinite;
 }
 
+/* 프로젝트 섹션 기준점 잡기 */
+.project {
+    position: relative;
+    z-index: 1;
+}
+
+/* 하단 30% 영역 그라디언트 처리 */
+.project::before {
+    content: '';
+    position: absolute;
+    bottom: 0;  
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+    
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* PROJECT 텍스트 스타일 */
 .project-text {
-    /* 요청 스타일: 20px semibold 120% -2% #FFF */
     font-size: 20px;
     font-weight: 600; 
     line-height: 1.2em; 
     letter-spacing: -0.02em; 
     color: #FFF; 
-    opacity: 0; /* JS로 제어, 기본 숨김 */
+    opacity: 0;
     transition: opacity 0.3s;
 }
 
@@ -125,13 +145,11 @@ html, body {
 
 /* 슬라이드 0 (HOME): 검은색 화살표 */
 .arrow-black {
-    /* [Right arrow.png] 링크로 변경하세요 */
     background-image: url('../images/black-arrow.png'); 
 }
 
 /* 슬라이드 1~4: 흰색 화살표 */
 .arrow-white {
-    /* [Right arrow (1).png] 링크로 변경하세요 */
     background-image: url('../images/white-arrow.png'); 
 }
 
