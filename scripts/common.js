@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Swiper 초기화 및 설정
     const swiper = new Swiper('.wrap', {
         direction: 'horizontal', // 가로 슬라이드
+        grabCursor: true,
         speed: 800, // 넘어가는 속도 (ms)
         mousewheel: true, // 마우스 휠 작동
         keyboard: true, // 키보드 화살표 작동
