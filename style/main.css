@@ -94,6 +94,7 @@
 .graphic-section {justify-content: center; align-items: center; overflow:hidden;     flex-direction: column;}
 .gallerySwiper {
     width: 100vw;
+    overflow:visible;
 }
 
 .gallerySwiper .swiper-wrapper {
