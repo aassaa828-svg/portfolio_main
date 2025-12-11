@@ -7,7 +7,6 @@ const swiper = new Swiper(".gallerySwiper", {
     speed: 5000, 
     autoplay: {
         delay: 0, 
-        disableOnInteraction: false,
     },
 });
 
