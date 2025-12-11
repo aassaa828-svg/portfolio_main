@@ -23,26 +23,22 @@ html, body {
 
 /* 슬라이드를 가로로 배열하는 컨테이너 */
 .slider-container {
-    display: flex;
-    width: 600vw; /* 6개의 슬라이드 * 100vw */
-    height: 100%;
-    /* 부드러운 이동 효과 */
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    width: 100%;
+    height: 100vh; /* 화면 전체 높이 */
 }
 
-/* 개별 슬라이드: 뷰포트 전체 크기 */
-.slide {
-    flex: 0 0 16.6666%; /* 1/6 너비 */
-    width: 100vw;
-    height: 100vh;
+/* 개별 슬라이드 */
+.slider-container > .swiper-slide {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 40px;
-    box-sizing: border-box;
+    justify-content: center;
+    overflow: hidden; /* 내용 넘침 방지 */
+    padding:40px;
 }
 
 /* ------------------- 
-   2. Navigation Menu Styles 
+2. Navigation Menu Styles 
    ------------------- */
 .main-nav {
     position: fixed;
@@ -169,4 +165,8 @@ html, body {
         /* 중간(50% 시점)에서는 위로 5px 이동 */
         transform: translateY(-5px);
     }
+}
+
+@media screen and (max-width: 1800px) {
+.about-section {flex-flow:column;}
 }

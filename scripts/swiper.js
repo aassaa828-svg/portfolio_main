@@ -1,5 +1,5 @@
 // 1. Swiper 설정
-const swiper = new Swiper(".gallerySwiper", {
+const gallerySwiper = new Swiper(".gallerySwiper", {
     slidesPerView: 5.5,
     spaceBetween: 20,
     loop: true,
