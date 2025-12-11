@@ -166,7 +166,3 @@ html, body {
         transform: translateY(-5px);
     }
 }
-
-@media screen and (max-width: 1800px) {
-.about-section {flex-flow:column;}
-}
